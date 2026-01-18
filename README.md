@@ -3,10 +3,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-blueviolet)](https://claude.ai/claude-code)
 [![Version](https://img.shields.io/badge/version-0.2.0-green.svg)](.claude-plugin/plugin.json)
-[![GitHub Stars](https://img.shields.io/github/stars/zircote/github-social-preview?style=social)](https://github.com/zircote/github-social-preview)
-[![GitHub Issues](https://img.shields.io/github/issues/zircote/github-social-preview)](https://github.com/zircote/github-social-preview/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/zircote/github-social-preview)](https://github.com/zircote/github-social-preview/commits)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/zircote/github-social-preview/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/zircote/github-social?style=social)](https://github.com/zircote/github-social)
+[![GitHub Issues](https://img.shields.io/github/issues/zircote/github-social)](https://github.com/zircote/github-social/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/zircote/github-social)](https://github.com/zircote/github-social/commits)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/zircote/github-social/pulls)
 
 A Claude Code plugin that optimizes GitHub repository presentation by analyzing project intent and purpose.
 
