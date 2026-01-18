@@ -1,7 +1,7 @@
 ---
 description: Generate a social preview image for the current GitHub repository
-argument-hint: [--style abstract|illustrated|minimalist] [--provider dalle-3|manual]
-allowed-tools: Read, Glob, Grep, Bash, Write
+argument-hint: [--style abstract|illustrated|minimalist] [--provider dalle-3|manual] [--upload]
+allowed-tools: Read, Glob, Grep, Bash, Write, mcp__github__create_or_update_file, mcp__github__get_file_contents
 ---
 
 Generate a social preview image for this GitHub repository that captures the project's spirit and purpose.
@@ -28,6 +28,7 @@ Look for `.claude/github-social.local.md` configuration file. If it exists, pars
 Command-line overrides (if provided via $ARGUMENTS):
 - `--style [value]` overrides configured style
 - `--provider [value]` overrides configured provider
+- `--upload` uploads the generated image to the GitHub repository
 
 ### 2. Analyze Project
 
@@ -57,12 +58,22 @@ Use the social-preview skill to:
    - Output the detailed prompt
    - Provide instructions for manual generation
 
-### 4. Report Results
+### 4. Upload to Repository (if --upload flag or upload_to_repo: true)
+
+If upload is requested:
+1. Detect repository owner and name from git remote
+2. Read the generated image and encode as base64
+3. Check if file already exists at `.github/social-preview.png` (get SHA if updating)
+4. Use `mcp__github__create_or_update_file` to upload the image
+5. Report upload success with commit URL
+
+### 5. Report Results
 
 If image generated:
 - Confirm file location
 - Report dimensions and file size
-- Provide instructions for uploading to GitHub
+- If uploaded: provide commit URL and link to GitHub settings
+- If not uploaded: provide instructions for uploading to GitHub
 
 If prompt-only:
 - Display the generated prompt
@@ -71,10 +82,14 @@ If prompt-only:
 
 ## GitHub Upload Instructions
 
-After image is generated, remind user:
+If `--upload` was used:
+- The image has been committed to `.github/social-preview.png` in the repository
+- Direct user to repository Settings → General → Social preview to select the uploaded image
+
+If manual upload needed:
 1. Go to repository Settings
 2. Under "Social preview", click "Edit"
-3. Upload the generated image
+3. Upload the generated image from `.github/social-preview.png`
 4. Save changes
 
 The image will appear when the repository is shared on social media platforms.

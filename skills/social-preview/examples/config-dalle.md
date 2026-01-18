@@ -15,6 +15,7 @@ output_path: .github/social-preview.png
 dimensions: 1280x640
 include_text: false
 colors: auto
+upload_to_repo: true
 ---
 
 # Project Brand Guidelines (Optional)
@@ -62,7 +63,8 @@ Generate a social preview image for this project
 3. Calls DALL-E 3 API with the prompt
 4. Downloads and resizes image to 1280x640
 5. Saves to `.github/social-preview.png`
-6. Reports success with file details
+6. If `upload_to_repo: true`, uploads the image to your GitHub repository
+7. Reports success with file details and commit URL (if uploaded)
 
 ## Cost
 

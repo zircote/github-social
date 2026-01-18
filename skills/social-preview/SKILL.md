@@ -37,6 +37,7 @@ If file exists, parse YAML frontmatter for:
 - `include_text`: Whether to include project name in image
 - `custom_style`: Custom style description if style is "custom"
 - `colors`: Color scheme preference (auto, dark, light, custom)
+- `upload_to_repo`: Whether to upload the image to the GitHub repository (true/false, default: false)
 
 If no config exists, proceed with defaults (prompt-only output).
 
@@ -167,6 +168,48 @@ If image exceeds 1MB:
 - Compress with quality reduction
 - Convert to optimized PNG
 - Report final size
+
+### Step 7: Upload to Repository (Optional)
+
+If `upload_to_repo: true` is configured (or `--upload` flag provided):
+
+1. **Detect repository info**:
+   - Parse `git remote get-url origin` to extract owner and repo name
+   - Determine current branch with `git branch --show-current`
+
+2. **Prepare upload**:
+   - Read the generated image file
+   - Encode content as base64 for GitHub API
+
+3. **Check for existing file**:
+   - Use GitHub API to check if `.github/social-preview.png` exists
+   - If exists, retrieve the SHA for update operation
+
+4. **Upload via GitHub MCP tool**:
+   Use `mcp__github__create_or_update_file` with:
+   ```yaml
+   owner: [detected owner]
+   repo: [detected repo]
+   path: .github/social-preview.png
+   content: [base64 encoded image]
+   message: "chore: update social preview image"
+   branch: [current or default branch]
+   sha: [existing file SHA if updating]
+   ```
+
+5. **Report upload status**:
+   - Confirm successful upload with commit URL
+   - Provide GitHub settings link for activating the social preview
+
+**Upload error handling**:
+- **Authentication failed**: Ensure `gh` CLI is authenticated or GITHUB_TOKEN is set
+- **Permission denied**: User may not have push access to the repository
+- **Branch protection**: May need to create PR instead of direct push
+
+**Note**: Uploading commits the image to the repository. To set it as the actual social preview, users must still:
+1. Go to repository Settings → General
+2. Scroll to "Social preview"
+3. Click "Edit" and select the uploaded image
 
 ## Style Guide for Prompts
 
