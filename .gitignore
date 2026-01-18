@@ -1,0 +1,23 @@
+# Local configuration files (may contain user preferences)
+.claude/*.local.md
+
+# Generated images during testing
+*.png
+*.jpg
+*.jpeg
+!examples/**/*.png
+
+# Temporary files
+temp_*
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

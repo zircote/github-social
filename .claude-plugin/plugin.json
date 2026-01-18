@@ -1,0 +1,9 @@
+{
+  "name": "github-social",
+  "version": "0.1.0",
+  "description": "Generate social preview images for GitHub repositories by analyzing project intent and purpose",
+  "author": {
+    "name": "zircote"
+  },
+  "keywords": ["github", "social-preview", "og-image", "image-generation", "repository"]
+}
