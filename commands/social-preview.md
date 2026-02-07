@@ -1,5 +1,5 @@
 ---
-name: github-social:social-preview
+name: social-preview
 description: Generate a social preview image for the current GitHub repository
 argument-hint: "[--provider svg|dalle-3|gemini|manual] [--style minimal|geometric|illustrated] [--dark-mode] [--upload]"
 allowed-tools: Read, Glob, Grep, Bash, Write, mcp__github__create_or_update_file, mcp__github__get_file_contents, Skill
