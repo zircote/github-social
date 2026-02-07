@@ -1,5 +1,5 @@
 ---
-name: readme-enhance
+name: github-social:readme-enhance
 description: Enhance README.md with marketing badges and a NotebookLM-style infographic
 argument-hint: "[--provider svg|dalle-3|gemini|manual] [--badges-only] [--infographic-only] [--dark-mode] [--dry-run]"
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__github__create_or_update_file", "Skill"]

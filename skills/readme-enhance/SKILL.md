@@ -1,5 +1,5 @@
 ---
-name: readme-enhance
+name: README Enhancement Generator
 description: This skill should be used when the user asks to "enhance readme", "add badges to readme", "create readme infographic", "improve readme marketing", "add shields.io badges", "create architecture diagram", "generate project infographic", "make readme more engaging", "add project badges", "create visual overview", or needs to improve README.md with marketing badges and visual infographics that capture project architecture, features, and purpose.
 ---
 

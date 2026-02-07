@@ -1,5 +1,5 @@
 ---
-name: repo-metadata
+name: github-social:repo-metadata
 description: Generate optimized repository description and topics for GitHub
 argument-hint: "[--apply]"
 allowed-tools: Read, Glob, Grep, Bash, Skill

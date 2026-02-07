@@ -1,5 +1,5 @@
 ---
-name: social-preview
+name: Social Preview Generator
 description: This skill should be used when the user asks to "generate social preview", "create social image", "github social preview", "repository preview image", "og image", "social media card", "create repo image", "github card image", or needs to create an image that captures a project's spirit and purpose for social media sharing. Analyzes project files to understand intent and generates optimized SVG graphics or AI-generated images.
 ---
 

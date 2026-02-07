@@ -1,5 +1,5 @@
 ---
-name: repo-metadata
+name: Repository Metadata Generator
 description: This skill should be used when the user asks to "update repo description", "improve repository description", "generate topics", "add labels to repo", "optimize github metadata", "make repo more discoverable", "improve repo SEO", "update project description", or needs to create engaging repository descriptions and topics that improve discoverability. Analyzes project files to generate optimized GitHub metadata.
 ---
 
