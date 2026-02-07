@@ -1,5 +1,5 @@
 ---
-name: all
+name: github-social:all
 description: Run all github-social skills in sequence - metadata, social preview, and README enhancement
 argument-hint: "[--apply] [--dry-run] [--provider svg|dalle-3|gemini|manual] [--skip-badges] [--skip-infographic] [--dark-mode]"
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "MCPSearch", "mcp__github__create_or_update_file", "Skill"]
