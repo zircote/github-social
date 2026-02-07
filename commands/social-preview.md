@@ -1,15 +1,19 @@
 ---
-name: github-social:social-preview
+allowed-tools: Read, Glob, Grep, Bash, Write, mcp__github__create_or_update_file,
+  mcp__github__get_file_contents, Skill
+argument-hint: '[--provider svg|dalle-3|gemini|manual] [--style minimal|geometric|illustrated]
+  [--dark-mode] [--upload]'
 description: Generate a social preview image for the current GitHub repository
-argument-hint: "[--provider svg|dalle-3|gemini|manual] [--style minimal|geometric|illustrated] [--dark-mode] [--upload]"
-allowed-tools: Read, Glob, Grep, Bash, Write, mcp__github__create_or_update_file, mcp__github__get_file_contents, Skill
+name: social-preview
 ---
-
+<!-- BEGIN MNEMONIC PROTOCOL -->
 ## Memory
 
-Capture after: `/mnemonic:capture patterns "{REPO} social preview {PROVIDER} style"`
+Search first: `/mnemonic:search {relevant_keywords}`
+Capture after: `/mnemonic:capture {namespace} "{title}"`
 
-Generate a social preview image for this GitHub repository that captures the project's spirit and purpose.
+Run `/mnemonic:list --namespaces` to see available namespaces from loaded ontologies.
+<!-- END MNEMONIC PROTOCOL -->
 
 ## Task
 
