@@ -14,16 +14,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - JPG is required for GitHub social preview (GitHub doesn't accept SVG)
   - JPG specs: 1280x640, quality 90, < 1MB
   - Both files uploaded when using `--upload` flag
+- **[citation-cff]**: New skill for CITATION.cff file management
+  - Create valid CITATION.cff from project metadata (any language ecosystem)
+  - Validate against CFF 1.2.0 schema with error codes and fix suggestions
+  - Sync version, date-released, authors, and keywords from project sources
+  - Export citations as BibTeX, APA, RIS, CodeMeta, or EndNote
+  - Enrich with ORCID iDs, DOIs, and preferred-citation blocks
+  - Generate GitHub Actions workflow for CI validation via `dieghernan/cff-validator`
+- **[/citation-cff]**: New command with `--init`, `--sync`, `--validate`, `--enrich`, `--export`, `--workflow` flags
 
 ### Fixed
 
-- **[setup]**: Updated setup wizard with SVG-first provider options
+- **[social-setup]**: Updated setup wizard with SVG-first provider options
   - SVG now shown as first (recommended) option
   - Added Gemini provider option
   - Removed deprecated stable-diffusion option
   - Added dark_mode and upload_to_repo configuration
 - **[commands]**: Added explicit `name` fields to all command files
-  - `github-social:all` and `github-social:setup` use prefixed names
+  - `github-social:social-all` and `github-social:social-setup` use prefixed names
   - Prevents conflicts with other plugins
 - **[examples]**: Removed undocumented `style` field from AI provider examples
   - Only `svg_style` is a valid config option (for SVG provider)
@@ -71,7 +79,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Comprehensive reference documentation for badge patterns and infographic prompts
 - **[/readme-enhance]**: New command to enhance README with badges and infographic
   - Supports `--badges-only`, `--infographic-only`, and `--dry-run` flags
-- **[/github-social:all]**: New command to run all skills in sequence
+- **[/github-social:social-all]**: New command to run all skills in sequence
   - Executes repo-metadata, social-preview, and readme-enhance in order
   - Supports `--apply`, `--dry-run`, `--skip-badges`, and `--skip-infographic` flags
   - Shared project analysis for efficiency
@@ -121,7 +129,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Supports multiple providers (DALL-E, Stable Diffusion, Midjourney, manual)
   - Outputs images meeting GitHub requirements (1280x640px, <1MB)
 - **[/social-preview]**: Command to generate social preview images
-- **[/github-social:setup]**: Interactive setup wizard for configuration
+- **[/github-social:social-setup]**: Interactive setup wizard for configuration
 - Configuration via `.claude/github-social.local.md` with YAML frontmatter
 - MIT License
 
