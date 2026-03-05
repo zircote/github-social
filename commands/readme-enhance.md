@@ -5,10 +5,6 @@ argument-hint: "[--provider svg|dalle-3|gemini|manual] [--badges-only] [--infogr
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "mcp__github__create_or_update_file", "Skill"]
 ---
 
-## Memory
-
-Capture after: `/mnemonic:capture patterns "{REPO} README enhancement badges and infographic"`
-
 # README Enhancement Command
 
 Enhance the current project's README.md with marketing badges (shields.io) and a NotebookLM-style infographic that captures project architecture, features, and purpose.
@@ -171,7 +167,7 @@ Display:
 
 ## Tips
 
-- Run `/github-social:all` to run all enhancement commands in sequence
+- Run `/github-social:social-all` to run all enhancement commands in sequence
 - SVG infographics are free, instant, and editable
 - The generation prompt is always displayed in the README for transparency
 - Badges are optimized for the `for-the-badge` style by default

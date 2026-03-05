@@ -8,7 +8,7 @@ This is a Claude Code plugin to optimize GitHub repository presentation with soc
 
 ## Key Components
 
-- **Commands**: 3 commands (repo-metadata, setup, social-preview)
+- **Commands**: 5 commands (repo-metadata, social-setup, social-preview, readme-enhance, social-all)
 - **Skills**: 2 skills (repo-metadata, social-preview)
 
 ## Plugin Structure
@@ -34,4 +34,4 @@ claude --plugin-dir .
 Then test:
 - `/github-social:social-preview` command
 - `/github-social:repo-metadata` command
-- `/github-social:setup` command
+- `/github-social:social-setup` command

@@ -1,12 +1,8 @@
 ---
-name: setup
+name: social-setup
 description: Interactive setup wizard for github-social configuration
 allowed-tools: Read, Write, Bash, AskUserQuestion, Skill
 ---
-
-## Memory
-
-Capture after: `/mnemonic:capture decisions "{REPO} GitHub Social setup configuration"`
 
 Set up the github-social plugin configuration for this project.
 
@@ -101,7 +97,7 @@ upload_to_repo: [true/false]
 
 # GitHub Social Plugin Configuration
 
-This configuration was created by `/github-social:setup`.
+This configuration was created by `/github-social:social-setup`.
 
 ## Provider Options
 
@@ -151,8 +147,8 @@ Override any setting via command flags:
 Display the created configuration and explain:
 - How to generate images: `/social-preview` or ask naturally
 - How to enhance README: `/readme-enhance`
-- How to run all skills: `/github-social:all`
-- How to modify settings: edit `.claude/github-social.local.md` or run `/github-social:setup` again
+- How to run all skills: `/github-social:social-all`
+- How to modify settings: edit `.claude/github-social.local.md` or run `/github-social:social-setup` again
 - Remind about `.gitignore` if they want to keep config private
 
 ### 6. Offer Test Generation

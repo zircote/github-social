@@ -5,10 +5,6 @@ argument-hint: "[--apply]"
 allowed-tools: Read, Glob, Grep, Bash, Skill
 ---
 
-## Memory
-
-Capture after: `/mnemonic:capture patterns "{REPO} repo metadata description and topics"`
-
 Generate an engaging repository description and relevant topics for this GitHub repository.
 
 ## Task

@@ -1,13 +1,9 @@
 ---
-name: all
+name: social-all
 description: Run all github-social skills in sequence - metadata, social preview, and README enhancement
 argument-hint: "[--apply] [--dry-run] [--provider svg|dalle-3|gemini|manual] [--skip-badges] [--skip-infographic] [--dark-mode]"
 allowed-tools: ["Read", "Write", "Edit", "Glob", "Grep", "Bash", "MCPSearch", "mcp__github__create_or_update_file", "Skill"]
 ---
-
-## Memory
-
-Capture after: `/mnemonic:capture patterns "{REPO} GitHub Social full enhancement"`
 
 # Complete GitHub Social Enhancement
 
@@ -162,26 +158,26 @@ If `--apply` flag or user confirms:
 
 ```bash
 # Preview all enhancements (SVG default)
-/github-social:all
+/github-social:social-all
 
 # Apply all changes automatically
-/github-social:all --apply
+/github-social:social-all --apply
 
 # Dry run to see what would change
-/github-social:all --dry-run
+/github-social:social-all --dry-run
 
 # Use DALL-E for artistic images
-/github-social:all --provider=dalle-3 --apply
+/github-social:social-all --provider=dalle-3 --apply
 
 # Use Gemini for image generation
-/github-social:all --provider=gemini --apply
+/github-social:social-all --provider=gemini --apply
 
 # Generate with dark mode support
-/github-social:all --dark-mode --apply
+/github-social:social-all --dark-mode --apply
 
 # Skip certain features
-/github-social:all --apply --skip-infographic
-/github-social:all --apply --skip-badges
+/github-social:social-all --apply --skip-infographic
+/github-social:social-all --apply --skip-badges
 ```
 
 ## Tips
@@ -199,5 +195,5 @@ If `--apply` flag or user confirms:
 - `/social-preview` - Generate social preview image only
 - `/repo-metadata` - Generate metadata only
 - `/readme-enhance` - Enhance README only
-- `/github-social:setup` - Configure plugin settings
+- `/github-social:social-setup` - Configure plugin settings
 

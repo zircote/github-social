@@ -5,10 +5,6 @@ argument-hint: "[--provider svg|dalle-3|gemini|manual] [--style minimal|geometri
 allowed-tools: Read, Glob, Grep, Bash, Write, mcp__github__create_or_update_file, mcp__github__get_file_contents, Skill
 ---
 
-## Memory
-
-Capture after: `/mnemonic:capture patterns "{REPO} social preview {PROVIDER} style"`
-
 Generate a social preview image for this GitHub repository that captures the project's spirit and purpose.
 
 ## Task
