@@ -1,0 +1,100 @@
+{
+  "skill_name": "repo-metadata",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate repository metadata for my CLI tool. It's called 'kubectx' and it's written in Go. It helps switch between Kubernetes contexts and namespaces quickly from the terminal. It supports fuzzy matching, shell completion, and works across Linux and macOS.",
+      "expected_output": "A description under 350 characters starting with an action verb describing the Kubernetes context-switching capability, plus a set of lowercase hyphenated topics covering Go, Kubernetes, CLI, and related domains.",
+      "files": [],
+      "expectations": [
+        "The description is 350 characters or fewer",
+        "The description starts with an action verb (e.g., Switch, Manage, Navigate) and does NOT start with 'A ', 'An ', 'The ', or 'This is'",
+        "The description mentions Kubernetes contexts or namespaces",
+        "The topics include 'go' or 'golang' as a language topic",
+        "The topics include at least two of: 'kubernetes', 'k8s', 'cli', 'command-line', 'devops'",
+        "All topics are lowercase and use hyphens instead of spaces or underscores"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Update the repo description and topics for my Python library. It's called 'pydantic-settings' and it provides settings management for Python applications using Pydantic. It reads from environment variables, .env files, TOML, YAML, and secrets. It supports nested models and validation.",
+      "expected_output": "A description under 350 characters about the settings management library for Python with Pydantic, plus relevant topics including python, pydantic, and configuration-related terms.",
+      "files": [],
+      "expectations": [
+        "The description is 350 characters or fewer",
+        "The description uses active voice and mentions settings or configuration management",
+        "The description references Pydantic or type-safe/validated configuration",
+        "The topics include 'python' as a language topic",
+        "The topics include at least one of: 'pydantic', 'configuration', 'settings', 'environment-variables', 'dotenv'",
+        "The output shows the character count for the description"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate metadata for my web framework project. It's a TypeScript framework called 'hono' for building web APIs. It runs on Cloudflare Workers, Deno, Bun, and Node.js. It's fast, lightweight, has zero dependencies, and supports middleware, routing, and JSX.",
+      "expected_output": "A description following the framework pattern (adjective + framework + for building what + differentiator) under 350 chars, plus topics covering TypeScript, web, edge/serverless platforms.",
+      "files": [],
+      "expectations": [
+        "The description is 350 characters or fewer and does not contain markdown formatting",
+        "The description does NOT start with 'A ' or 'This is'",
+        "The description mentions web APIs, edge, or multi-runtime capability",
+        "The topics include 'typescript' and at least one of: 'nodejs', 'deno', 'bun', 'cloudflare-workers'",
+        "The topics include at least one of: 'web-framework', 'api', 'backend', 'serverless', 'edge-computing'",
+        "No more than 20 topics are listed"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Generate a repository description for my project. It's a comprehensive enterprise platform for real-time collaborative document editing with version control, role-based access control, audit logging, SSO integration via SAML and OIDC, multi-tenant architecture, plugin system, REST and GraphQL APIs, webhook support, real-time notifications, full-text search with Elasticsearch, S3-compatible file storage, automated backups, horizontal scaling with Redis pub/sub, rate limiting, internationalization supporting 40 languages, accessibility compliance, and a comprehensive admin dashboard with analytics.",
+      "expected_output": "A description that captures the most important aspects of this complex project while staying strictly within the 350-character limit.",
+      "files": [],
+      "expectations": [
+        "The description is 350 characters or fewer despite the feature-rich input",
+        "The description prioritizes the core value proposition (collaborative document editing) over listing all features",
+        "The description does NOT start with 'A ' or 'This is'",
+        "The description uses active voice",
+        "The character count is explicitly shown in the output"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Generate topics for my Rust project that is a fast JSON parser with SIMD optimizations. It supports streaming, zero-copy parsing, and serde compatibility. It targets high-performance data processing pipelines.",
+      "expected_output": "A set of well-formatted topics following all GitHub topic rules.",
+      "files": [],
+      "expectations": [
+        "All topics are entirely lowercase with no uppercase letters",
+        "Multi-word topics use hyphens (not underscores or spaces), e.g., 'json-parser' not 'json_parser'",
+        "Each individual topic is 50 characters or fewer",
+        "The total number of topics does not exceed 20",
+        "The topics include 'rust' as the language topic",
+        "The topics include at least two of: 'json', 'json-parser', 'simd', 'parser', 'serde', 'high-performance', 'data-processing'"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Generate repo metadata for my project. I don't have a README yet. The repo only has a single main.py file that does some stuff with APIs.",
+      "expected_output": "The skill asks for more information about the project or generates a minimal description based on the limited context, noting the lack of detail.",
+      "files": [],
+      "expectations": [
+        "The response either asks clarifying questions about the project purpose OR generates a best-effort description based on available context",
+        "If a description is generated, it still follows the 350-character limit",
+        "If a description is generated, it does NOT start with 'A ' or 'This is'",
+        "The response acknowledges the limited information available"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Generate a repository description for my project called 'imgproxy'. It's a standalone Go server for resizing and converting remote images on the fly. It's fast, secure, and easy to deploy with Docker. It supports WebP, AVIF, and processing pipelines.",
+      "expected_output": "A description that leads with value, uses active voice, and avoids prohibited patterns.",
+      "files": [],
+      "expectations": [
+        "The description starts with a strong action verb (e.g., Resize, Transform, Process) rather than a noun or article",
+        "The description does NOT contain version numbers",
+        "The description does NOT use superlatives like 'best', 'fastest', 'ultimate'",
+        "The description does NOT use passive voice constructions (e.g., 'is used for', 'can be deployed')",
+        "The description mentions image processing or resizing as the core capability",
+        "The gh CLI commands are shown for applying the metadata (gh repo edit --description and --add-topic)"
+      ]
+    }
+  ]
+}

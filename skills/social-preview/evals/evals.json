@@ -1,0 +1,110 @@
+{
+  "skill_name": "social-preview",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate a social preview image for my CLI tool called 'fastdeploy' that automates Kubernetes deployments. It's a Go project with a README describing it as a fast, reliable deployment pipeline.",
+      "expected_output": "SVG file generated at .github/social-preview.svg using DevTools/CLI domain palette with dark slate background and cyan accents, plus a mandatory JPG conversion at .github/social-preview.jpg",
+      "files": [],
+      "expectations": [
+        "The generated SVG file contains a viewBox attribute set to '0 0 1280 640' ensuring correct 2:1 aspect ratio dimensions",
+        "The SVG uses DevTools/CLI domain colors: background colors from the slate family (#0f172a or #1e293b) and cyan accent (#06b6d4 or #22d3ee)",
+        "The SVG contains the project name 'fastdeploy' rendered in a <text> element with text-anchor='middle' for centered positioning",
+        "A JPG conversion command (using convert, rsvg-convert, or similar tool) is executed to produce .github/social-preview.jpg from the SVG source",
+        "The SVG contains an xmlns='http://www.w3.org/2000/svg' attribute on the root <svg> element making it valid SVG markup",
+        "The output report mentions both the SVG file location and the JPG file location with their respective sizes"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Create a social preview for my Python machine learning library called 'neuralforge'. It provides tools for building and training neural networks with a focus on simplicity.",
+      "expected_output": "SVG generated with AI/ML domain palette using indigo/violet colors, neural network visual elements, and JPG conversion",
+      "files": [],
+      "expectations": [
+        "The SVG uses the AI/ML domain color palette with indigo background tones (#1e1b4b or #312e81) rather than DevTools slate tones",
+        "The SVG accent colors include violet shades (#8b5cf6 or #a78bfa) consistent with the AI/ML palette specification",
+        "The SVG contains visual elements suggesting neural networks or AI concepts such as circles (nodes), lines (connections), or abstract data flow shapes",
+        "The project name 'neuralforge' appears in a <text> element within the SVG",
+        "The SVG viewBox is set to '0 0 1280 640' and the file is saved to .github/social-preview.svg",
+        "JPG conversion is attempted to produce .github/social-preview.jpg for GitHub upload compatibility"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a social preview for my project using --provider=manual. The project is 'datawatch', a real-time data monitoring dashboard built with React.",
+      "expected_output": "A detailed text prompt suitable for manual use with DALL-E, Midjourney, or Stable Diffusion is output instead of generating an SVG file directly",
+      "files": [],
+      "expectations": [
+        "The output contains a structured image generation prompt with visual description, color references, and composition notes rather than writing an SVG file",
+        "The prompt includes the project name 'datawatch' and references data/analytics or dashboard visual concepts",
+        "A negative prompt section is provided listing elements to avoid (e.g., watermarks, cluttered, text artifacts)",
+        "The output includes instructions for how to use the prompt with at least one image generation tool (DALL-E, Midjourney, or Stable Diffusion)",
+        "The prompt specifies dimensions of 1280x640 or a 2:1 aspect ratio for GitHub social preview compatibility"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Generate a social preview SVG with geometric style for my security scanning tool called 'vaultguard'. It's a Rust-based tool for detecting secrets in codebases.",
+      "expected_output": "SVG with geometric style (8-15 shapes) using the Security domain palette with green and yellow accents, shield or lock visual metaphors",
+      "files": [],
+      "expectations": [
+        "The SVG uses Security domain colors: dark slate background (#0f172a or #1e293b) with green (#22c55e) and/or yellow (#eab308) accents",
+        "The SVG contains more than 5 distinct shape elements (rect, circle, path, line, polygon, ellipse) consistent with the geometric style specification of 8-15 shapes",
+        "The SVG includes visual elements evoking security concepts such as shield paths, lock shapes, or protective barrier metaphors",
+        "The SVG text content includes the project name 'vaultguard'",
+        "A JPG file is produced at .github/social-preview.jpg via a conversion step from the SVG source"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Create a social preview image for a project that has no README.md file. The repository only contains a go.mod with module name 'github.com/example/unknown-tool' and some Go source files.",
+      "expected_output": "The skill either asks the user to describe the project purpose or proceeds with minimal information extracted from go.mod and source files",
+      "files": [],
+      "expectations": [
+        "The skill acknowledges the absence of a README.md and either asks the user for a project description or attempts to infer purpose from go.mod and source files",
+        "If an SVG is generated despite missing README, it still contains a valid viewBox='0 0 1280 640' and xmlns attribute",
+        "The project name used in the SVG is derived from the go.mod module path (e.g., 'unknown-tool') rather than being left blank or using a placeholder like 'PROJECT-NAME'",
+        "The skill does not crash or produce an error — it follows the error handling path defined for 'No README or project files found'"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Generate a social preview for my web framework 'blazeui' with dark mode support. Use --dark-mode flag. It's a TypeScript frontend component library.",
+      "expected_output": "Two SVG variants are generated: a light/standard version and a dark variant, each with corresponding JPG files",
+      "files": [],
+      "expectations": [
+        "The SVG uses Web/Frontend domain colors with sky/blue tones (#0c4a6e, #075985) and blue accents (#3b82f6, #60a5fa)",
+        "A dark mode variant SVG is generated at .github/social-preview-dark.svg in addition to the standard .github/social-preview.svg",
+        "Both SVG files have corresponding JPG conversions attempted (.github/social-preview.jpg and .github/social-preview-dark.jpg)",
+        "The dark variant uses inverted color scheme with dark background (#0f172a) and light text (#f8fafc) per the dark mode conversion guidelines",
+        "The project name 'blazeui' appears in <text> elements in both the standard and dark SVG variants"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Generate a social preview for my infrastructure project 'cloudmesh' that manages multi-cloud Terraform deployments. Use the default minimal style.",
+      "expected_output": "Minimal SVG with Infrastructure domain palette, 3-5 simple shapes, cloud/server visual metaphors, generous whitespace",
+      "files": [],
+      "expectations": [
+        "The SVG uses Infrastructure domain colors with slate background (#1e293b or #334155) and cyan accents (#06b6d4)",
+        "The SVG contains no more than 5 primary visual shape elements (excluding the background rect and text elements) consistent with the minimal style specification",
+        "The SVG includes cloud, server rack, or pipeline visual elements appropriate for the infrastructure domain",
+        "The project name 'cloudmesh' is rendered in the SVG with a sans-serif font-family attribute",
+        "The SVG file size target is under 50KB as specified in the skill requirements, and a warning is produced if it exceeds that threshold"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Generate a social preview for 'analytix', a Python data analytics library with pandas-like API. Include the tagline 'Fast DataFrame analytics for Python' in the image.",
+      "expected_output": "SVG with Data/Analytics domain palette including amber and blue accents, containing both the project name and the specified tagline text",
+      "files": [],
+      "expectations": [
+        "The SVG uses Data/Analytics domain colors with background tones (#1e3a5f or #0f172a) and amber (#f59e0b) plus blue (#3b82f6) accents",
+        "The SVG contains visual elements representing data concepts such as bar chart rectangles, line chart polylines, or scatter plot circles",
+        "The SVG includes a <text> element containing the tagline 'Fast DataFrame analytics for Python' or a close paraphrase, positioned below the project name",
+        "The project name 'analytix' appears in a prominent <text> element with a larger font-size than the tagline text",
+        "A JPG conversion is performed and both .github/social-preview.svg and .github/social-preview.jpg file paths are reported in the output"
+      ]
+    }
+  ]
+}

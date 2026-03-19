@@ -1,0 +1,124 @@
+{
+  "skill_name": "readme-enhance",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Enhance the README for this Node.js CLI tool project. The repo is at github.com/acme/taskrunner, it has a package.json with name 'taskrunner' version '2.1.0', a LICENSE file with MIT, a .github/workflows/ci.yml, and the primary language is TypeScript.",
+      "expected_output": "README.md updated with shields.io badges (version, build, license, language, stars, downloads, PRs welcome), an SVG infographic saved to .github/readme-infographic.svg with 1280x640 viewBox, and a collapsible prompt details section in the README.",
+      "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        ".github/workflows/ci.yml"
+      ],
+      "expectations": [
+        "README.md contains at least one badge URL matching 'https://img.shields.io/' with 'style=for-the-badge' query parameter",
+        "README.md contains an npm version badge with 'npm/v/taskrunner' in the URL",
+        "README.md contains a license badge referencing MIT",
+        "An SVG file is written to .github/readme-infographic.svg containing a root <svg> element with viewBox='0 0 1280 640'",
+        "README.md contains a <details> block with <summary> referencing 'infographic generation prompt' or similar wording",
+        "README.md contains an <img> tag referencing '.github/readme-infographic.svg' wrapped in a center-aligned <p> element"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Enhance the README for my Python library 'dataweave' hosted at github.com/jsmith/dataweave. It has a pyproject.toml with version 0.8.3, an Apache-2.0 LICENSE, GitHub Actions CI, and Codecov integration.",
+      "expected_output": "README.md updated with Python-specific badges (PyPI version, build status, coverage, license, language), an SVG infographic using the Library/SDK balanced layout, and the collapsible prompt section.",
+      "files": [
+        "README.md",
+        "pyproject.toml",
+        "LICENSE",
+        ".github/workflows/ci.yml"
+      ],
+      "expectations": [
+        "README.md contains a PyPI version badge with 'pypi/v/dataweave' in the URL and 'logo=python' parameter",
+        "README.md contains a Codecov coverage badge with 'codecov/c/github/jsmith/dataweave' in the URL",
+        "README.md contains a license badge referencing Apache 2.0 or Apache_2.0",
+        "The SVG infographic contains a linearGradient element for the background fill",
+        "README.md badge lines appear after the first H1 heading and before the infographic image element",
+        "The SVG infographic contains text elements with the project name 'dataweave'"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Enhance the README for github.com/acme/taskrunner with --badges-only mode. It has package.json (name: taskrunner, version: 3.0.0), MIT LICENSE, and GitHub Actions CI.",
+      "expected_output": "README.md updated with badges only; no infographic SVG file is generated and no infographic image tag is inserted into the README.",
+      "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        ".github/workflows/ci.yml"
+      ],
+      "expectations": [
+        "README.md contains shields.io badge markdown with 'style=for-the-badge'",
+        "No SVG file is created at .github/readme-infographic.svg",
+        "README.md does not contain an <img> tag referencing 'readme-infographic'",
+        "README.md contains a build status badge referencing 'github/actions/workflow/status'",
+        "Badges are ordered with status/version badges appearing before engagement badges (stars, PRs welcome)"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Enhance the README for github.com/acme/taskrunner with --infographic-only mode. It has package.json (name: taskrunner, version: 1.5.0), MIT LICENSE, and TypeScript source files.",
+      "expected_output": "An SVG infographic is generated and placed in the README, but existing badges are not modified or added.",
+      "files": ["README.md", "package.json", "LICENSE"],
+      "expectations": [
+        "An SVG file is written to .github/readme-infographic.svg with viewBox='0 0 1280 640'",
+        "README.md contains an <img> tag or <picture> element referencing the infographic SVG",
+        "README.md contains a <details> block with the collapsible generation prompt section",
+        "No new shields.io badge lines are added to README.md beyond any that already existed",
+        "The SVG contains a footer section with an install command or project link text"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Enhance the README for a project at github.com/devuser/myutil that has no package.json, no Cargo.toml, no pyproject.toml, and no go.mod. It only has a README.md, some .sh scripts, and a LICENSE (MIT).",
+      "expected_output": "The skill extracts the project name from the git remote URL, generates badges using GitHub-level information (license, stars, last commit), and creates an infographic using available context.",
+      "files": ["README.md", "LICENSE"],
+      "expectations": [
+        "README.md contains a license badge for MIT even without a package manifest",
+        "README.md contains GitHub engagement badges (stars or last-commit) using 'devuser/myutil' in the URL",
+        "No registry-specific version badge (npm, PyPI, crates.io) is present since there is no package manifest",
+        "An SVG infographic is still generated at .github/readme-infographic.svg with valid SVG markup",
+        "The SVG infographic has a 1280x640 viewBox and contains the project name 'myutil' in a text element"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Enhance the README for github.com/acme/nightvision. It has package.json (name: nightvision, version: 1.0.0), MIT LICENSE, and a .claude/github-social.local.md config with dark_mode set to 'both'.",
+      "expected_output": "README.md uses a <picture> element with <source> tags for dark and light mode infographic variants, and both SVG files are generated.",
+      "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        ".claude/github-social.local.md"
+      ],
+      "expectations": [
+        "README.md contains a <picture> element with a <source> tag having media='(prefers-color-scheme: dark)' and srcset referencing a dark variant SVG",
+        "README.md contains a <source> tag with media='(prefers-color-scheme: light)' referencing the light variant SVG",
+        "Two SVG files are generated: the default infographic and a dark mode variant (e.g., readme-infographic-dark.svg)",
+        "The <picture> element contains a fallback <img> tag referencing the default infographic SVG"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Enhance the README for github.com/bigcorp/megaplatform. It has package.json (name: megaplatform, version: 5.2.1), MIT LICENSE, GitHub Actions CI, Codecov, a Discord community link in README, a FUNDING.yml, docs at docs.megaplatform.io, and TypeScript as primary language. Ensure badges follow proper ordering and stay within limits.",
+      "expected_output": "README.md contains a comprehensive but bounded badge set (8-12 badges) ordered by importance: status first, then version, quality, language, metrics, engagement, community, and support last.",
+      "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        ".github/workflows/ci.yml",
+        ".github/FUNDING.yml"
+      ],
+      "expectations": [
+        "README.md contains between 8 and 12 shields.io badge lines (not exceeding 15)",
+        "The build status badge appears before the npm version badge in the README source order",
+        "The version badge appears before stars/downloads engagement badges in source order",
+        "README.md contains a Discord badge with 'logo=discord' in the URL",
+        "README.md contains a sponsor or funding-related badge since FUNDING.yml exists",
+        "README.md contains a documentation badge referencing docs.megaplatform.io"
+      ]
+    }
+  ]
+}
